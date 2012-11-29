@@ -1,4 +1,4 @@
-# Calcola n-esimo numero primo {LC} 
+# Calcola n-esimo numero primo LC
 
 # 	$t0 			posizione finale numero primo
 # 	$t1 			posizione temporanea numero primo
@@ -7,6 +7,7 @@
 # 	$t5 			costante incremento
 # 	$t6 			divisore
 # 	$t7, $t8, $t9	registri di appoggio
+
 
 
 .data
@@ -60,7 +61,7 @@ main:
 			mfhi $t9
 
 			beq $t9, $zero, while		#se il resto è 0 non è primo
-			beq $t8, $t6, primo			#se div == (num+1)/2 -> primo
+			beq $t8, $t6, primo			#se div == (num-1)/2 -> primo
 
 			add $t6, $t6, $t5	 		#div ++
 		
